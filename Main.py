@@ -4,4 +4,5 @@ def sumar(x, y):
     return z
 
 def restar(x, y):
-    return x - y
+    z = x - y
+    return z
