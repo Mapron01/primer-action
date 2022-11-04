@@ -43,13 +43,16 @@ jobs:
     - uses: actions/setup-python@v3
     - name: create credentials
       run: |
+        pwd
         cd ~
         mkdir .aws
         cd .aws
         echo "${{secrets.AWS_CREDENTIALS}}" > credentials
         aws s3 ls
     - name: deploy
-    run: aws s3 ls
+      run: |
+        cd 
+    
         
 
 
