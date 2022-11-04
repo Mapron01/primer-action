@@ -51,7 +51,7 @@ jobs:
         aws s3 ls
     - name: deploy
       run: |
-        cd 
+        cd /home/runner/work/primer-action/primer-action
     
         
 
