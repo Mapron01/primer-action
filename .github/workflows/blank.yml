@@ -37,7 +37,16 @@ jobs:
         run: |
           source env/bin/activate
           pytest
-        
-      
+  CI:
+   runs-on: ubuntu-latest
+   steps:
+    - uses: actions/setup-python@v3
+    - name: create credentials
+      run: |
+        cd ~
+        mkdir .aws
+        cd .aws
+        echo "${{secrets.AWS_CREDENTIALS}}" > credentials
+        ls
 
 
