@@ -52,6 +52,7 @@ jobs:
     - name: deploy
       run: |
         cd /home/runner/work/primer-action/primer-action
+        aws s3 cp Main.py https://s3.console.aws.amazon.com/s3/buckets/gittestt1234?region=us-east-1&tab=objects
     
         
 
