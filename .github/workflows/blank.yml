@@ -48,8 +48,8 @@ jobs:
         cd .aws
         echo "${{secrets.AWS_CREDENTIALS}}" > credentials
         aws s3 ls
-        cd ~
-        ls
+    - name: deploy
+    run: aws s3 ls
         
 
 
